@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "iceageempire:ruby"
+    }
+  },
+  "result": {
+    "item": "iceageempire:ruby_block"
+  }
+
+
+}
