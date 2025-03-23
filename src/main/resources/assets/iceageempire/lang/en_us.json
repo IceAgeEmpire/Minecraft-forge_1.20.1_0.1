@@ -4,5 +4,8 @@
 
   "block.iceageempire.ruby_block": "Block of Ruby",
   "block.iceageempire.raw_ruby_block": "Block of Raw Ruby",
+  "block.iceageempire.ruby_ore": "Ruby Ore",
+  "block.iceageempire.deepslate_ruby_ore": "Deepslate Ruby Ore",
+
   "creativetab.tutorial_tab": "Ruby-related Items"
 }
