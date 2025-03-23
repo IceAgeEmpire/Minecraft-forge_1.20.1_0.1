@@ -1,5 +1,8 @@
 {
   "item.iceageempire.ruby": "Ruby",
   "item.iceageempire.raw_ruby": "Raw Ruby",
+
+  "block.iceageempire.ruby_block": "Block of Ruby",
+  "block.iceageempire.raw_ruby_block": "Block of Raw Ruby",
   "creativetab.tutorial_tab": "Ruby-related Items"
 }

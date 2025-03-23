@@ -1,6 +1,7 @@
 package net.iceageempire.iceageempire;
 
 import com.mojang.logging.LogUtils;
+import net.iceageempire.iceageempire.block.ModBlocks;
 import net.iceageempire.iceageempire.item.ModCreativeModeTabs;
 import net.iceageempire.iceageempire.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,6 +32,7 @@ public class MyFirstMod {
 
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

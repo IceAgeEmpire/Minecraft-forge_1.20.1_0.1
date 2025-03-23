@@ -1,6 +1,7 @@
 package net.iceageempire.iceageempire.item;
 
 import net.iceageempire.iceageempire.MyFirstMod;
+import net.iceageempire.iceageempire.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,6 +20,8 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RUBY.get());
                         pOutput.accept(ModItems.RAW_RUBY.get());
+                        pOutput.accept(ModBlocks.RUBY_BLOCK.get());
+                        pOutput.accept(ModBlocks.RAW_RUBY_BLOCK.get());
                     })
                     .build());
 
