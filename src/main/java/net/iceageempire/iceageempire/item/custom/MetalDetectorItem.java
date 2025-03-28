@@ -1,5 +1,7 @@
 package net.iceageempire.iceageempire.item.custom;
 
+import net.iceageempire.iceageempire.block.ModBlocks;
+import net.iceageempire.iceageempire.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -49,6 +51,9 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.DIAMOND_ORE);
+        return state.is(ModBlocks.RUBY_ORE.get()) || state.is(Blocks.GOLD_ORE) || state.is(Blocks.EMERALD_BLOCK) || state.is(Blocks.IRON_ORE) || state.is(Blocks.DIAMOND_ORE);
     }
+//    private boolean isValuableBlock(BlockState state) {
+//        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
+//    }
 }
