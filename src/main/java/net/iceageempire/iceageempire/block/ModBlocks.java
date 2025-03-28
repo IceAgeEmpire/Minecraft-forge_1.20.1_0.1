@@ -1,6 +1,7 @@
 package net.iceageempire.iceageempire.block;
 
 import net.iceageempire.iceageempire.MyFirstMod;
+import net.iceageempire.iceageempire.block.custom.TreantBlock;
 import net.iceageempire.iceageempire.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -32,6 +33,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
                     .requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+    public static final RegistryObject<Block> TREANT_BLOCK = registerBlock("treant_block",
+            () -> new TreantBlock());
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
