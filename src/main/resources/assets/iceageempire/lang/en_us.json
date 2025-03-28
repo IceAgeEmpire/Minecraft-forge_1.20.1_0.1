@@ -4,12 +4,14 @@
   "item.iceageempire.metal_detector": "Metal Detector",
   "item.iceageempire.ruby_sword": "Ruby Sword",
   "item.iceageempire.diamond_potato": "Diamond Potato",
+  "tooltip.iceageempire.RubySword.tooltip": "Heals on hit. Absorption gained on kills",
 
   "block.iceageempire.ruby_block": "Block of Ruby",
   "block.iceageempire.raw_ruby_block": "Block of Raw Ruby",
   "block.iceageempire.ruby_ore": "Ruby Ore",
   "block.iceageempire.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.iceageempire.treant_block": "Treant Head",
+
 
   "creativetab.tutorial_tab": "Vampire Arise"
 }

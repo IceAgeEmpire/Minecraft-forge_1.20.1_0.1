@@ -60,10 +60,7 @@ public class TreantBlock extends HorizontalDirectionalBlock {
             }
 
         }
-
         return InteractionResult.SUCCESS;
-
     }
-
 
 }

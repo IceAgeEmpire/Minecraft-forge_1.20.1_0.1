@@ -22,6 +22,8 @@ public class ModItems {
             () -> new RubySwordItem(Tiers.DIAMOND, 1, -2.4f, new Item.Properties().durability(635)));
     public static final RegistryObject<Item> DIAMOND_POTATO = ITEMS.register("diamond_potato",
             () -> new Item(new Item.Properties().food(ModFoods.DIAMOND_POTATO)));
+//    public static final RegistryObject<Item> TREANT_BLOCK_FUEL = ITEMS.register("treant_block",
+//            () -> new FuelBlockItem(TREANT_BLOCK.get(), new Item.Properties()));
 
 
     public static void register (IEventBus eventbus){
