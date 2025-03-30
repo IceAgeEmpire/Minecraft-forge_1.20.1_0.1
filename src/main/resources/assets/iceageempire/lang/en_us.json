@@ -4,6 +4,8 @@
   "item.iceageempire.metal_detector": "Metal Detector",
   "item.iceageempire.ruby_sword": "Ruby Sword",
   "item.iceageempire.diamond_potato": "Diamond Potato",
+  "item.iceageempire.ruby_staff": "Ruby Staff",
+
   "tooltip.iceageempire.RubySword.tooltip": "Heals on hit. Absorption gained on kills",
 
   "block.iceageempire.ruby_block": "Block of Ruby",

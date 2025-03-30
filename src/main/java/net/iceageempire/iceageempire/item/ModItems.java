@@ -3,6 +3,7 @@ package net.iceageempire.iceageempire.item;
 import net.iceageempire.iceageempire.MyFirstMod;
 import net.iceageempire.iceageempire.item.custom.MetalDetectorItem;
 import net.iceageempire.iceageempire.item.custom.ModFoods;
+import net.iceageempire.iceageempire.item.custom.RubyStaffItem;
 import net.iceageempire.iceageempire.item.custom.RubySwordItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
@@ -24,7 +25,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.DIAMOND_POTATO)));
 //    public static final RegistryObject<Item> TREANT_BLOCK_FUEL = ITEMS.register("treant_block",
 //            () -> new FuelBlockItem(TREANT_BLOCK.get(), new Item.Properties()));
-
+    public static final RegistryObject<Item> RUBY_STAFF = ITEMS.register("ruby_staff",
+        () -> new RubyStaffItem(new Item.Properties().stacksTo(1)));
 
     public static void register (IEventBus eventbus){
         ITEMS.register(eventbus);
