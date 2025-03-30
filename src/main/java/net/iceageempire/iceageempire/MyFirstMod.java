@@ -27,6 +27,10 @@ public class MyFirstMod {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public MyFirstMod(IEventBus eventBus) {
+        eventBus.register(this);
+    }
+
     public MyFirstMod(FMLJavaModLoadingContext context){
         IEventBus modEventBus = context.getModEventBus();
 

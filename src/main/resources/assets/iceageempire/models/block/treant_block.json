@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "iceageempire:block/treant_sleep",
-    "side": "iceageempire:block/pale_oak_log",
-    "top": "iceageempire:block/pale_oak_log_top"
-  }
-}
