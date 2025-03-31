@@ -2,6 +2,7 @@ package net.iceageempire.iceageempire.item;
 
 import net.iceageempire.iceageempire.MyFirstMod;
 import net.iceageempire.iceageempire.block.ModBlocks;
+import net.iceageempire.iceageempire.item.custom.ModArmorMaterials;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,6 +35,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RUBY_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
                         pOutput.accept(ModBlocks.TREANT_BLOCK.get());
+
+                        pOutput.accept(ModItems.RUBY_HELMET.get());
+                        pOutput.accept(ModItems.RUBY_CHESTPLATE.get());
+                        pOutput.accept(ModItems.RUBY_LEGGINGS.get());
+                        pOutput.accept(ModItems.RUBY_BOOTS.get());
 
                     })
                     .build());
