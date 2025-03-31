@@ -19,9 +19,22 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.RUBY);
         simpleItem(ModItems.RAW_RUBY);
-        simpleItem(ModItems.METAL_DETECTOR);
+        handheldItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.DIAMOND_POTATO);
-        simpleItem(ModItems.RUBY_SWORD);
+
+        handheldItem(ModItems.RUBY_STAFF);
+        handheldItem(ModItems.RUBY_SWORD);
+        handheldItem(ModItems.RUBY_AXE);
+        handheldItem(ModItems.RUBY_PICKAXE);
+        handheldItem(ModItems.RUBY_SHOVEL);
+        handheldItem(ModItems.RUBY_HOE);
+
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(MyFirstMod.MODID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

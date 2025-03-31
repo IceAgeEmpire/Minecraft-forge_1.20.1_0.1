@@ -5,6 +5,11 @@
   "item.iceageempire.ruby_sword": "Ruby Sword",
   "item.iceageempire.diamond_potato": "Diamond Potato",
   "item.iceageempire.ruby_staff": "Ruby Staff",
+  "item.iceageempire.ruby_axe": "Ruby Axe",
+  "item.iceageempire.ruby_pickaxe": "Ruby Pickaxe",
+  "item.iceageempire.ruby_shovel": "Ruby Shovel",
+  "item.iceageempire.ruby_hoe": "Ruby Hoe",
+
 
   "tooltip.iceageempire.RubySword.tooltip": "Heals on hit. Absorption gained on kills",
 
