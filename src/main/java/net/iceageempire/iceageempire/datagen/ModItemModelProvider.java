@@ -43,7 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUBY);
         simpleItem(ModItems.RAW_RUBY);
         handheldItem(ModItems.METAL_DETECTOR);
-        simpleItem(ModItems.DIAMOND_POTATO);
+        simpleItem(ModItems.RUBY_POTATO);
 
         handheldItem(ModItems.RUBY_STAFF);
         handheldItem(ModItems.RUBY_SWORD);

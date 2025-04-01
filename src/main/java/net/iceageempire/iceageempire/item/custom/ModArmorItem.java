@@ -1,16 +1,13 @@
 package net.iceageempire.iceageempire.item.custom;
 
-import net.iceageempire.iceageempire.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -21,6 +18,16 @@ import java.util.List;
 import java.util.Random;
 
 public class ModArmorItem extends ArmorItem {
+    public int blindnessTimer = 200;
+
+    public int getBlindessTimer() {
+        return blindnessTimer;
+    }
+
+    public void setBlindnessTimer(int blindnessTimer){
+        this.blindnessTimer = blindnessTimer;
+    }
+
     public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
@@ -64,6 +71,39 @@ public class ModArmorItem extends ArmorItem {
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
+    @Override
+    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
+        if (!level.isClientSide && player != null && hasFullArmorSet(player)) {
+            blindnessTimer--;
+            MobEffectInstance effect = player.getEffect(MobEffects.REGENERATION);
+            //MobEffectInstance effect2 = player.getEffect(MobEffects.HUNGER);
+            if(effect != null){
+                if(blindnessTimer <= 0){
+                    player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 0, false, false, true));
+                    Random rand = new Random();
+                    int nextBlindess = rand.nextInt(4800) + 1200;
+                    blindnessTimer+=nextBlindess;
+                }
+                if(effect.getDuration()<20){
+                    player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, true));
+                }
+//                if(effect2.getDuration()<20){
+//                    player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 0, false, false, true));
+//                }
+            }
+            else {
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, true));
+                player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 0, false, false, true));
+            }
+        }
+    }
+
+    private boolean hasFullArmorSet(Player player) {
+        return player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof ModArmorItem &&
+                player.getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof ModArmorItem &&
+                player.getItemBySlot(EquipmentSlot.CHEST).getItem() instanceof ModArmorItem &&
+                player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ModArmorItem;
+    }
 
 /* Unused. Maybe in the future.
 

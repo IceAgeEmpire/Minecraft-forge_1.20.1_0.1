@@ -44,6 +44,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.STICK)
                 .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.RUBY_POTATO.get())
+                .pattern("###")
+                .pattern("#O#")
+                .pattern("###")
+                .define('O', Items.POTATO)
+                .define('#', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()), has(ModItems.RUBY.get()))
+                .save(pWriter);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.RUBY_BLOCK.get())

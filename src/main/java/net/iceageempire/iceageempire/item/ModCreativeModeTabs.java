@@ -2,7 +2,6 @@ package net.iceageempire.iceageempire.item;
 
 import net.iceageempire.iceageempire.MyFirstMod;
 import net.iceageempire.iceageempire.block.ModBlocks;
-import net.iceageempire.iceageempire.item.custom.ModArmorMaterials;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,7 +22,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RAW_RUBY.get());
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.RUBY_SWORD.get());
-                        pOutput.accept(ModItems.DIAMOND_POTATO.get());
+                        pOutput.accept(ModItems.RUBY_POTATO.get());
                         pOutput.accept(ModItems.RUBY_STAFF.get());
                         pOutput.accept(ModItems.RUBY_AXE.get());
                         pOutput.accept(ModItems.RUBY_PICKAXE.get());

@@ -44,8 +44,8 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
-    public static final RegistryObject<Item> DIAMOND_POTATO = ITEMS.register("diamond_potato",
-            () -> new Item(new Item.Properties().food(ModFoods.DIAMOND_POTATO)));
+    public static final RegistryObject<Item> RUBY_POTATO = ITEMS.register("ruby_potato",
+            () -> new Item(new Item.Properties().food(ModFoods.RUBY_POTATO)));
 
 //    public static final RegistryObject<Item> TREANT_BLOCK_FUEL = ITEMS.register("treant_block",
 //            () -> new FuelBlockItem(TREANT_BLOCK.get(), new Item.Properties()));
