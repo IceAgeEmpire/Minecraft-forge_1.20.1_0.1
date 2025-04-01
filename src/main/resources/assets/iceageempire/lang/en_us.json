@@ -15,7 +15,8 @@
   "item.iceageempire.ruby_leggings": "Ruby Leggings",
   "item.iceageempire.ruby_boots": "Ruby Boots",
 
-  "tooltip.iceageempire.RubySword.tooltip": "Heals on hit. Absorption gained on kills",
+  "tooltip.iceageempire.RubySword.tooltip": "Heals on hit. Absorption gained on kills.",
+  "tooltip.iceageempire.RubyArmor.tooltip": "Repairs on kills.",
 
   "block.iceageempire.ruby_block": "Block of Ruby",
   "block.iceageempire.raw_ruby_block": "Block of Raw Ruby",

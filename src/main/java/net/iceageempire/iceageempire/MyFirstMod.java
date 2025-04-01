@@ -2,6 +2,7 @@ package net.iceageempire.iceageempire;
 
 import com.mojang.logging.LogUtils;
 import net.iceageempire.iceageempire.block.ModBlocks;
+import net.iceageempire.iceageempire.events.ModEvents;
 import net.iceageempire.iceageempire.item.ModCreativeModeTabs;
 import net.iceageempire.iceageempire.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,7 +14,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,6 +26,10 @@ public class MyFirstMod {
     public static final String MODID = "iceageempire";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    public MyFirstMod() {
+        MinecraftForge.EVENT_BUS.register(ModEvents.class);
+    }
 
     public MyFirstMod(IEventBus eventBus) {
         eventBus.register(this);
